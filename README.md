@@ -10,40 +10,38 @@
 
 ## Project Summary
 
-The Item Catalog web project was ported to the public internet.
+The Item Catalog web project was ported to the public internet.<br>
 A Linux server running Ubuntu in the Amazon AWS cloud services.
 
-The server is tightly locked down for only ssh, web, and ntp 
+The server is tightly locked down for only ssh, web, and ntp<br>
 incoming requests.
 
-A user account, **grader**, has been created for Udacity reviewer
+A user account, **grader**, has been created for Udacity reviewer<br>
 to access server with **sudo** privileges.
 
 ## The IP address and SSH port of Linux server
 
-The reviewer can access my AWS Linux server at: 35.171.85.15
+The reviewer can access my AWS Linux server at: **35.171.85.15**
 
 The port has been changed from the default, now using 2200
 
-Here is a sample invocation:
-
+Here is a sample invocation:<br>
 ssh -i graderKey grader@35.171.85.15 -p 2200
 
-The passphrase respone to the prompt is **Udacity**:
-
+The passphrase respone to the prompt is **Udacity**:<br>
 Enter passphrase for key 'graderKey': Udacity
 
 The private key **graderKey** has been added to this repository for reviewer.
 
 ## The complete URL to my Catalog Application on Linux Server
 
-The URL to the splash / main page of the Item Catalog web site is:
+The URL to the main page of the Item Catalog web site is:<br>
 http://35.171.85.15.xip.io/
 
-A public copy of my Readme.MD that I submitted for the Catalog Application project
-has been made available for you called **myCatalogApp_Readme.MD**. It explains
-everything you need to know about the application as was required for the 
-project submission. My Catalog Application repository is private.
+A public copy of my Readme.MD that I submitted for the Catalog Application<br>
+project has been made available for you called **myCatalogApp_Readme.MD**.<br>
+It explains everything you need to know about the application as was required<br>
+for the project submission. My Catalog Application repository is private.
 
 One notable change is the replacing of database ending from SQLite to PostgreSQL.
 
@@ -92,19 +90,19 @@ One notable change is the replacing of database ending from SQLite to PostgreSQL
   2. Setup default blocking of all incoming requests
   3. Setup default allowing all outgoing requests
   4. Setup specific rules on ports/programs:
-    a) Allow ssh 
-    b) Allow 2200/tcp 
-    c) Allow web
-    d) Allow ntp
-    e) Allow 123/udp
+    	- Allow ssh 
+	- Allow 2200/tcp 
+   	- Allow web
+    	- Allow ntp
+    	- Allow 123/udp
   5. Enabled service
-  
+  <br>
   6. Removed Password Authentication, Remote Root Login, and Default Port
   7. Updated the sshd_config file:
-     a) Change Port to 2200
-     b) Set PasswordAuthentication to No
-     c) Set PermitRootLogin to No
-     
+  	- Changed Port to 2200
+  	- Set PasswordAuthentication to No
+  	- Set PermitRootLogin to No
+  <br>   
   8. Update and Upgrade System Software Packages
   9. Ran apt-get update
  10. Ran apt-get upgrade
@@ -114,35 +112,32 @@ One notable change is the replacing of database ending from SQLite to PostgreSQL
   2. Added new file **grader** to the **/etc/sudoers.d** directory
   3. Edited newly created **grader** file to allow all sudo access
   4. Created a **.ssh** directory in **grader's** home
-  5. Created new **authorized_keys** file in **.ssh**
-  6. Copy and pasted the **grader's** public key (provided in project submission Note's to Reviewer field)
+  5. Created new **authorized_keys** file in **.ssh** directory
+  6. Copied and pasted the **grader's** public key<br>
+     (this will be provided in project submission Note's to Reviewer field)
   
 
 ## List of any third-party resources used of to complete this project
 
-https://mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user
-https://knowledge.udacity.com/questions21110
-https://www.getmura.com/blog/wildcard-dns-using-xipio/
-https://www.tecmint.com/install-and-configure-ntp-server-client-in-debian/
-https://www.cyberciti.biz/faq/linux-unix-bsd-is-ntp-client-working/
-https://askubuntu.com/questions/1009729/unable-to-start-ntpd-service
-https://askubuntu.com/questions/538208/how-to-check-opened-closed-ports-on-my-computer
-http://man7.org/linux/man-pages/man5/sshd_config.5.html
-https://wsgi.readthedocs.io/en/latest/
-https://modwsgi.readthedocs.io/en/develop/user-guides/checking-your-installation.html#python-installation-in-use
-https://modwsgi.readthedocs.io/en/develop/user-guides/installation-issues.html
-http://httpd.apache.org/
-http://httpd.apache.org/docs/current/configuring.html
-http://www.postgresql.org/
-http://postgresguide.com/utilities/psql.html
-http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/
-http://httpd.apache.org/docs/current/configuring.html
-https://modwsgi.readthedocs.io/en/develop/user-guides/installation-issues.html
-https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
-https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php
-http://man7.org/linux/man-pages/man5/sshd_config.5.html
-https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
-https://modwsgi.readthedocs.io/en/develop/user-guides/application-issues.html#application-working-directory
-https://stackoverflow.com/questions/48513139/logins-stop-working-when-switching-to-wsgi-with-flask-flask-login-mod-wsgi
-https://www.a2hosting.com/kb/getting-started-guide/accessing-your-account/disabling-ssh-logins-for-root
+[How do I disable SSH login for the root user?](https://mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user)
+[Udacity Knowledgebase](https://knowledge.udacity.com/questions21110)
+[Wildcard DNS Using xip.io](https://www.getmura.com/blog/wildcard-dns-using-xipio/)
+[NTP Info](https://www.tecmint.com/install-and-configure-ntp-server-client-in-debian/)
+[NTP Info](https://www.cyberciti.biz/faq/linux-unix-bsd-is-ntp-client-working/)
+[NTP Info](https://askubuntu.com/questions/1009729/unable-to-start-ntpd-service)
+[How to check opened/closed ports on my computer?](https://askubuntu.com/questions/538208/how-to-check-opened-closed-ports-on-my-computer)
+[Linux Man Pages](http://man7.org/linux/man-pages/man5/sshd_config.5.html)
+[WSGI.org](https://wsgi.readthedocs.io/en/latest/)
+[mod_wsgi Document User Guides Installation](https://modwsgi.readthedocs.io/en/develop/user-guides/checking-your-installation.html#python-installation-in-use)
+[mod_wsgi Document User Guides Installation Issues](https://modwsgi.readthedocs.io/en/develop/user-guides/installation-issues.html)
+[mod_wsgi Document User Guides - Application Working Directory](https://modwsgi.readthedocs.io/en/develop/user-guides/application-issues.html#application-working-directory)
+[Apache.org](http://httpd.apache.org/)
+[Apache.org Configuration](http://httpd.apache.org/docs/current/configuring.html)
+[PostgreSQL.org](http://www.postgresql.org/)
+[PostgreSQL.org Psql](http://postgresguide.com/utilities/psql.html)
+[mod_wsgi (Apache)](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)
+[DigitalOcean - How To Deploy a Flask Application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+[BogoToBogo - Flask Hello World App with Apache WSG](https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php)
+[StackOverflow - Logins stop working when switching to wsgi with Flask, Flask login, mod-wsgi](https://stackoverflow.com/questions/48513139/logins-stop-working-when-switching-to-wsgi-with-flask-flask-login-mod-wsgi)
+[A2 Hosting - How to disable SSH logins for the root account](https://www.a2hosting.com/kb/getting-started-guide/accessing-your-account/disabling-ssh-logins-for-root)
 
