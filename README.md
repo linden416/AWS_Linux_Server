@@ -6,7 +6,7 @@
 |File|Description|
 |----|-----------|
 |GraderKey|Grader account's private key for key based authentication using ssh|
-|myCatalogApp_Readme.MD|A public copy from my private CatalogApp respository|
+|myCatalogApp_Readme.MD|A public copy of my Readme.MD from my CatalogApp project respository|
 
 ## Project Summary
 
@@ -16,18 +16,21 @@ A Linux server running Ubuntu in the Amazon AWS cloud services.
 The server is tightly locked down for only ssh, web, and ntp 
 incoming requests.
 
-A user account, **grader**, has been created for Udacity to access
-server with **sudo** privileges.
+A user account, **grader**, has been created for Udacity reviewer
+to access server with **sudo** privileges.
 
 ## The IP address and SSH port of Linux server
 
 The reviewer can access my AWS Linux server at: 35.171.85.15
-The port has been changed, now using 2200
+
+The port has been changed from the default, now using 2200
 
 Here is a sample invocation:
+
 ssh -i graderKey grader@35.171.85.15 -p 2200
 
 The passphrase respone to the prompt is **Udacity**:
+
 Enter passphrase for key 'graderKey': Udacity
 
 The private key **graderKey** has been added to this repository for reviewer.
