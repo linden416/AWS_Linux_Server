@@ -97,8 +97,8 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
     	- Allow ssh
 	- Allow 2200/tcp
 	- Allow web
-    	- Allow ntp
-    	- Allow 123/udp
+	- Allow ntp
+	- Allow 123/udp
   5. Enabled service
   6. Performed following steps to lock down **ssh**
   7. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
@@ -123,7 +123,7 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
 ## List of any third-party resources used to complete this project
 
 [How do I disable SSH login for the root user?](https://mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user)<br>
-[Udacity Knowledgebase](https://knowledge.udacity.com/questions21110)<br>
+[Udacity Knowledgebase - 21110 Google OAuth not taking AWS IP Address](https://knowledge.udacity.com/questions21110)<br>
 [Wildcard DNS Using xip.io](https://www.getmura.com/blog/wildcard-dns-using-xipio/)<br>
 [NTP Info - install and config](https://www.tecmint.com/install-and-configure-ntp-server-client-in-debian/)<br>
 [NTP Info - ntp client](https://www.cyberciti.biz/faq/linux-unix-bsd-is-ntp-client-working/)<br>
