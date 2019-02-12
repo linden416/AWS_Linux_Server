@@ -85,7 +85,7 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
 	- Configured WSGI Daemon to run as **1 process** to avoid isolating session data<br>
 	which would happen if multiple processes were handling page requests. 
 12. Created both a **catalog** user account and database in PostgreSQL:
-    	- postgres=# create user catalog with password 'Udacity';
+	- postgres=# create user catalog with password 'Udacity';
    	- postgres=# create database catalog;
    	- postgres=# grant all privileges on database catalog to catalog;
  
