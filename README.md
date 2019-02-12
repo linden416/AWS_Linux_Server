@@ -85,9 +85,9 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
 	- Configured WSGI Daemon to run as **1 process** to avoid isolating session data<br>
 	which would happen if multiple processes were handling page requests. 
 12. Created both a **catalog** user account and database in PostgreSQL:<br>
-    postgres=# create user catalog with password 'Udacity';
-    postgres=# create database catalog;
-    postgres=# grant all privileges on database catalog to catalog;
+    	- postgres=# create user catalog with password 'Udacity';
+   	- postgres=# create database catalog;
+   	- postgres=# grant all privileges on database catalog to catalog;
  
  ### Changes to secure Linux server
   1. Activated **ufw** Firewall
@@ -104,8 +104,8 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
   7. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
   8. Updated the sshd_config file:<br>
   	- Changed Port to 2200
-  	- Set PasswordAuthentication to No
-  	- Set PermitRootLogin to No
+ 	- Set PasswordAuthentication to No
+	- Set PermitRootLogin to No
   9. Performed following steps to update system software   
  10. Update and Upgrade System Software Packages
  11. Ran apt-get update
