@@ -104,7 +104,7 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
   7. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
   8. Updated the sshd_config file:
   	- Changed Port to 2200
- 	- Set PasswordAuthentication to No
+	- Set PasswordAuthentication to No
 	- Set PermitRootLogin to No
   9. Performed following steps to update system software   
  10. Update and Upgrade System Software Packages
@@ -126,11 +126,11 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
 [How do I disable SSH login for the root user?](https://mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user)<br>
 [Udacity Knowledgebase](https://knowledge.udacity.com/questions21110)<br>
 [Wildcard DNS Using xip.io](https://www.getmura.com/blog/wildcard-dns-using-xipio/)<br>
-[NTP Info](https://www.tecmint.com/install-and-configure-ntp-server-client-in-debian/)<br>
-[NTP Info](https://www.cyberciti.biz/faq/linux-unix-bsd-is-ntp-client-working/)<br>
-[NTP Info](https://askubuntu.com/questions/1009729/unable-to-start-ntpd-service)<br>
+[NTP Info - install and config](https://www.tecmint.com/install-and-configure-ntp-server-client-in-debian/)<br>
+[NTP Info - ntp client](https://www.cyberciti.biz/faq/linux-unix-bsd-is-ntp-client-working/)<br>
+[NTP Info - how to restart](https://askubuntu.com/questions/1009729/unable-to-start-ntpd-service)<br>
 [How to check opened/closed ports on my computer?](https://askubuntu.com/questions/538208/how-to-check-opened-closed-ports-on-my-computer)<br>
-[Linux Man Pages](http://man7.org/linux/man-pages/man5/sshd_config.5.html)<br>
+[Linux Man Pages for sshd_config](http://man7.org/linux/man-pages/man5/sshd_config.5.html)<br>
 [WSGI.org](https://wsgi.readthedocs.io/en/latest/)<br>
 [mod_wsgi Document User Guides Installation](https://modwsgi.readthedocs.io/en/develop/user-guides/checking-your-installation.html#python-installation-in-use)<br>
 [mod_wsgi Document User Guides Installation Issues](https://modwsgi.readthedocs.io/en/develop/user-guides/installation-issues.html)<br>
