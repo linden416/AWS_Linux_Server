@@ -80,10 +80,10 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
  8. Updated catalog.py removing the code in __main__ that ran on port 8000 and established app secret key.
  9. Updated both data_model.py and suptDBFxns.py replacing database engine to PostgreSQL.
 10. Updated template file login.html specifying new ClientId established from step #6 above.
-11. Updated the Apache /etc/apache2/sites-enabled/000-default.conf: 
+11. Updated the Apache /etc/apache2/sites-enabled/000-default.conf:
 	- Configured WSGI connection to my CatalogApp
-	- Configured WSGI Daemon to run as **1 process** to avoid isolating session data
-		which would happen if multiple processes were handling page requests. 
+	- Configured WSGI Daemon to run as **1 process** to avoid isolating session data<br>
+	which would happen if multiple processes were handling page requests. 
 12. Created both a **catalog** user account and database in PostgreSQL:
     postgres=# create user catalog with password 'Udacity';
     postgres=# create database catalog;
@@ -94,22 +94,22 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
   2. Setup default blocking of all incoming requests
   3. Setup default allowing all outgoing requests
   4. Setup specific rules on ports/programs:
-    	- Allow ssh 
-	- Allow 2200/tcp 
-   	- Allow web
+    	- Allow ssh
+	- Allow 2200/tcp
+	- Allow web
     	- Allow ntp
     	- Allow 123/udp
   5. Enabled service
-  <br>
-  6. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
-  7. Updated the sshd_config file:
+  6. Performed following steps to lock down **ssh**
+  7. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
+  8. Updated the sshd_config file:
   	- Changed Port to 2200
   	- Set PasswordAuthentication to No
   	- Set PermitRootLogin to No
-  <br>   
-  8. Update and Upgrade System Software Packages
-  9. Ran apt-get update
- 10. Ran apt-get upgrade
+  9. Performed following steps to update system software   
+ 10. Update and Upgrade System Software Packages
+ 11. Ran apt-get update
+ 12. Ran apt-get upgrade
      
  ### Changes for creating new user
   1. Added new user **grader**
@@ -123,25 +123,25 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
 
 ## List of any third-party resources used to complete this project
 
-[How do I disable SSH login for the root user?](https://mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user)
-[Udacity Knowledgebase](https://knowledge.udacity.com/questions21110)
-[Wildcard DNS Using xip.io](https://www.getmura.com/blog/wildcard-dns-using-xipio/)
-[NTP Info](https://www.tecmint.com/install-and-configure-ntp-server-client-in-debian/)
-[NTP Info](https://www.cyberciti.biz/faq/linux-unix-bsd-is-ntp-client-working/)
-[NTP Info](https://askubuntu.com/questions/1009729/unable-to-start-ntpd-service)
-[How to check opened/closed ports on my computer?](https://askubuntu.com/questions/538208/how-to-check-opened-closed-ports-on-my-computer)
-[Linux Man Pages](http://man7.org/linux/man-pages/man5/sshd_config.5.html)
-[WSGI.org](https://wsgi.readthedocs.io/en/latest/)
-[mod_wsgi Document User Guides Installation](https://modwsgi.readthedocs.io/en/develop/user-guides/checking-your-installation.html#python-installation-in-use)
-[mod_wsgi Document User Guides Installation Issues](https://modwsgi.readthedocs.io/en/develop/user-guides/installation-issues.html)
-[mod_wsgi Document User Guides - Application Working Directory](https://modwsgi.readthedocs.io/en/develop/user-guides/application-issues.html#application-working-directory)
-[Apache.org](http://httpd.apache.org/)
-[Apache.org Configuration](http://httpd.apache.org/docs/current/configuring.html)
-[PostgreSQL.org](http://www.postgresql.org/)
-[PostgreSQL.org Psql](http://postgresguide.com/utilities/psql.html)
-[mod_wsgi (Apache)](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)
-[DigitalOcean - How To Deploy a Flask Application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
-[BogoToBogo - Flask Hello World App with Apache WSG](https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php)
-[StackOverflow - Logins stop working when switching to wsgi with Flask, Flask login, mod-wsgi](https://stackoverflow.com/questions/48513139/logins-stop-working-when-switching-to-wsgi-with-flask-flask-login-mod-wsgi)
-[A2 Hosting - How to disable SSH logins for the root account](https://www.a2hosting.com/kb/getting-started-guide/accessing-your-account/disabling-ssh-logins-for-root)
+[How do I disable SSH login for the root user?](https://mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user)<br>
+[Udacity Knowledgebase](https://knowledge.udacity.com/questions21110)<br>
+[Wildcard DNS Using xip.io](https://www.getmura.com/blog/wildcard-dns-using-xipio/)<br>
+[NTP Info](https://www.tecmint.com/install-and-configure-ntp-server-client-in-debian/)<br>
+[NTP Info](https://www.cyberciti.biz/faq/linux-unix-bsd-is-ntp-client-working/)<br>
+[NTP Info](https://askubuntu.com/questions/1009729/unable-to-start-ntpd-service)<br>
+[How to check opened/closed ports on my computer?](https://askubuntu.com/questions/538208/how-to-check-opened-closed-ports-on-my-computer)<br>
+[Linux Man Pages](http://man7.org/linux/man-pages/man5/sshd_config.5.html)<br>
+[WSGI.org](https://wsgi.readthedocs.io/en/latest/)<br>
+[mod_wsgi Document User Guides Installation](https://modwsgi.readthedocs.io/en/develop/user-guides/checking-your-installation.html#python-installation-in-use)<br>
+[mod_wsgi Document User Guides Installation Issues](https://modwsgi.readthedocs.io/en/develop/user-guides/installation-issues.html)<br>
+[mod_wsgi Document User Guides - Application Working Directory](https://modwsgi.readthedocs.io/en/develop/user-guides/application-issues.html#application-working-directory)<br>
+[Apache.org](http://httpd.apache.org/)<br>
+[Apache.org Configuration](http://httpd.apache.org/docs/current/configuring.html)<br>
+[PostgreSQL.org](http://www.postgresql.org/)<br>
+[PostgreSQL.org Psql](http://postgresguide.com/utilities/psql.html)<br>
+[mod_wsgi (Apache)](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)<br>
+[DigitalOcean - How To Deploy a Flask Application on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)<br>
+[BogoToBogo - Flask Hello World App with Apache WSG](https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php)<br>
+[StackOverflow - Logins stop working when switching to wsgi with Flask, Flask login, mod-wsgi](https://stackoverflow.com/questions/48513139/logins-stop-working-when-switching-to-wsgi-with-flask-flask-login-mod-wsgi)<br>
+[A2 Hosting - How to disable SSH logins for the root account](https://www.a2hosting.com/kb/getting-started-guide/accessing-your-account/disabling-ssh-logins-for-root)<br>
 
