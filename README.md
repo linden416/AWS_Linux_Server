@@ -103,13 +103,12 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
   6. Performed following steps to lock down **ssh**
   7. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
   8. Updated the sshd_config file:
-  	- Changed Port to 2200
-	- Set PasswordAuthentication to No
-	- Set PermitRootLogin to No
-  9. Performed following steps to update system software   
- 10. Update and Upgrade System Software Packages
- 11. Ran apt-get update
- 12. Ran apt-get upgrade
+  	- Changed port to 2200
+	- Set PasswordAuthentication to no
+	- Set PermitRootLogin to no
+  9. Performed following steps to update system software:
+  	- Ran apt-get update
+	- Ran apt-get upgrade
      
  ### Changes for creating new user
   1. Added new user **grader**
