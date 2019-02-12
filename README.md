@@ -84,7 +84,7 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
 	- Configured WSGI connection to my CatalogApp
 	- Configured WSGI Daemon to run as **1 process** to avoid isolating session data<br>
 	which would happen if multiple processes were handling page requests. 
-12. Created both a **catalog** user account and database in PostgreSQL:<br>
+12. Created both a **catalog** user account and database in PostgreSQL:
     	- postgres=# create user catalog with password 'Udacity';
    	- postgres=# create database catalog;
    	- postgres=# grant all privileges on database catalog to catalog;
@@ -102,7 +102,7 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
   5. Enabled service
   6. Performed following steps to lock down **ssh**
   7. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
-  8. Updated the sshd_config file:<br>
+  8. Updated the sshd_config file:
   	- Changed Port to 2200
  	- Set PasswordAuthentication to No
 	- Set PermitRootLogin to No
