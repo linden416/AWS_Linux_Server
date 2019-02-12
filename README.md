@@ -10,25 +10,29 @@
 
 ## Project Summary
 
-The Item Catalog web project was ported to the public internet.<br>
-A Linux server running Ubuntu in the Amazon AWS cloud services.
+The Item Catalog web project was ported to the internet on a<br>
+Linux server running Ubuntu in the Amazon AWS cloud services.
 
-The server is tightly locked down for only ssh, web, and ntp<br>
+I procured this cloud server and was required to lock it down<br>
+to specifications, make available for Udacity reviewer, and host<br>
+the prior project submission **Catalog App**.
+
+The server is tightly locked down for only **ssh**, **www**, and **ntp**<br>
 incoming requests.
 
-A user account, **grader**, has been created for Udacity reviewer<br>
+A user account, **grader**, has been created for a Udacity reviewer<br>
 to access server with **sudo** privileges.
 
 ## The IP address and SSH port of Linux server
 
 The reviewer can access my AWS Linux server at: **35.171.85.15**
 
-The port has been changed from the default, now using 2200
+The port has been changed from the default, now using **2200**
 
-Here is a sample invocation:<br>
-ssh -i graderKey grader@35.171.85.15 -p 2200
+Sample invocation:<br>
+**ssh -i graderKey grader@35.171.85.15 -p 2200**
 
-The passphrase respone to the prompt is **Udacity**:<br>
+The passphrase response to the prompt is **Udacity**:<br>
 Enter passphrase for key 'graderKey': Udacity
 
 The private key **graderKey** has been added to this repository for reviewer.
@@ -43,7 +47,7 @@ project has been made available for you called **myCatalogApp_Readme.MD**.<br>
 It explains everything you need to know about the application as was required<br>
 for the project submission. My Catalog Application repository is private.
 
-One notable change is the replacing of database ending from SQLite to PostgreSQL.
+One notable change is the replacing of database engine from SQLite to PostgreSQL.
 
 ## A summary of software Installed
 
@@ -70,16 +74,16 @@ One notable change is the replacing of database ending from SQLite to PostgreSQL
  2. Cloned my Catalog App from GitHub
  3. Removed Git files/overhead from directory
  4. Renamed project.py to catalog.py
- 5. Created new catalog.wsgi file to be configured in Apache2 for WSGI
+ 5. Created new **catalog.wsgi** file to be configured with Apache2 for WSGI
  6. Created new Google OAuth2 Client Secret file for app **Apache-CatalogApp** 
- 7. Updated both catalog.py and suptOAuth2.py making path to client secret file absolute.
+ 7. Updated both catalog.py and suptOAuth2.py making client secret file an absolute path.
  8. Updated catalog.py removing the code in __main__ that ran on port 8000 and established app secret key.
  9. Updated both data_model.py and suptDBFxns.py replacing database engine to PostgreSQL.
 10. Updated template file login.html specifying new ClientId established from step #6 above.
 11. Updated the Apache /etc/apache2/sites-enabled/000-default.conf: 
-	- Configured WSGI connect to CatalogApp
-	- Configured WSGI Daemon to run as 1 process to avoid isolating session data
-		which would happen if multipler processes handled page requests. 
+	- Configured WSGI connection to my CatalogApp
+	- Configured WSGI Daemon to run as **1 process** to avoid isolating session data
+		which would happen if multiple processes were handling page requests. 
 12. Created both a **catalog** user account and database in PostgreSQL:
     postgres=# create user catalog with password 'Udacity';
     postgres=# create database catalog;
@@ -97,7 +101,7 @@ One notable change is the replacing of database ending from SQLite to PostgreSQL
     	- Allow 123/udp
   5. Enabled service
   <br>
-  6. Removed Password Authentication, Remote Root Login, and Default Port
+  6. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
   7. Updated the sshd_config file:
   	- Changed Port to 2200
   	- Set PasswordAuthentication to No
@@ -111,13 +115,13 @@ One notable change is the replacing of database ending from SQLite to PostgreSQL
   1. Added new user **grader**
   2. Added new file **grader** to the **/etc/sudoers.d** directory
   3. Edited newly created **grader** file to allow all sudo access
-  4. Created a **.ssh** directory in **grader's** home
+  4. Created a **.ssh** directory in **grader's** home directory
   5. Created new **authorized_keys** file in **.ssh** directory
   6. Copied and pasted the **grader's** public key<br>
      (this will be provided in project submission Note's to Reviewer field)
   
 
-## List of any third-party resources used of to complete this project
+## List of any third-party resources used to complete this project
 
 [How do I disable SSH login for the root user?](https://mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user)
 [Udacity Knowledgebase](https://knowledge.udacity.com/questions21110)
