@@ -94,11 +94,11 @@ One notable change is the replacing of database engine from SQLite to PostgreSQL
   2. Setup default blocking of all incoming requests
   3. Setup default allowing all outgoing requests
   4. Setup specific rules on ports/programs: 
-    	- Allow ssh;
-	- Allow 2200/tcp;
-	- Allow web;
-	- Allow ntp;
-	- Allow 123/udp;
+    	- Allow ssh
+	- Allow 2200/tcp
+	- Allow web
+	- Allow ntp
+	- Allow 123/udp
   5. Enabled service
   6. Performed following steps to lock down **ssh**
   7. Removed **ssh** Password Authentication, Remote Root Login, and Default Port
